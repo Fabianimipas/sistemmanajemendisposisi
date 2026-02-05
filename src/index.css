@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;600&family=Roboto+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Navy Blue dari logo sebagai primary */
+    --background: 210 30% 98%;
+    --foreground: 220 50% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 50% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 50% 15%;
+    
+    /* Navy Blue Gelap dari latar belakang lingkaran logo */
+    --primary: 215 85% 20%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 210 30% 94%;
+    --secondary-foreground: 220 50% 15%;
+    
+    /* Abu-abu gelap untuk sub-judul/label */
+    --muted: 210 25% 92%;
+    --muted-foreground: 220 15% 40%;
+    
+    /* Emas/Kuning dari padi kapas/bintang untuk accent */
+    --accent: 45 95% 50%;
+    --accent-foreground: 220 50% 15%;
+    
+    /* Merah dari perisai Garuda untuk status urgent/ditolak */
+    --destructive: 0 85% 45%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 214 25% 88%;
+    --input: 214 25% 88%;
+    --ring: 215 85% 20%;
+    --radius: 0.5rem;
+    
+    --chart-1: 215 85% 20%;
+    --chart-2: 45 95% 50%;
+    --chart-3: 0 85% 45%;
+    --chart-4: 160 60% 45%;
+    --chart-5: 280 65% 60%;
+    
+    /* Font families */
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'Roboto Mono', monospace;
+  }
+
+  .dark {
+    /* Dark mode - Navy Blue yang lebih gelap untuk background */
+    --background: 220 50% 8%;
+    --foreground: 210 30% 95%;
+    --card: 220 45% 12%;
+    --card-foreground: 210 30% 95%;
+    --popover: 220 45% 12%;
+    --popover-foreground: 210 30% 95%;
+    
+    /* Navy Blue terang untuk primary di dark mode */
+    --primary: 215 75% 35%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 220 40% 18%;
+    --secondary-foreground: 210 30% 95%;
+    
+    /* Abu-abu untuk muted di dark mode */
+    --muted: 220 40% 18%;
+    --muted-foreground: 215 20% 65%;
+    
+    /* Emas/Kuning tetap untuk accent */
+    --accent: 45 95% 55%;
+    --accent-foreground: 220 50% 10%;
+    
+    /* Merah untuk destructive */
+    --destructive: 0 85% 50%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 220 35% 22%;
+    --input: 220 35% 22%;
+    --ring: 215 75% 35%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    line-height: 1.6;
+  }
+  
+  /* Headings menggunakan Montserrat Bold */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  
+  /* Ensure adequate spacing for readability */
+  p, li, td, th {
+    line-height: 1.6;
+  }
+}
